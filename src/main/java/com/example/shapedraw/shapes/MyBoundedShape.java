@@ -1,29 +1,28 @@
 package com.example.shapedraw.shapes;
 
-import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
+/**
+ * Abstract class for Bounded shape, its extends MyShape class and here
+ * we added an attributes of filing color
+ */
 public abstract class MyBoundedShape extends MyShape {
-    private boolean toFill;
+    private boolean fillingColor;
 
-    public MyBoundedShape(int x1, int y1, int x2, int y2, Color color, boolean toFill) {
-        super(x1, y1, x2, y1, color);
-        this.toFill = toFill;
+    //Constructor
+    public MyBoundedShape(int x1, int y1, int x2, int y2, Color color, boolean fillingColor) {
+        super(x1, y1, x2, y2, color);
+        this.fillingColor = fillingColor;
     }
 
-    public boolean isToFill() {
-        return toFill;
+    //Get filling color
+    public boolean getFillingColor() {
+        return fillingColor;
     }
 
-    public void setToFill(boolean toFill) {
-        this.toFill = toFill;
+    //Set filling Color
+    public void setFillingColor(boolean fillingColor) {
+        this.fillingColor = fillingColor;
     }
-
-    @Override
-    public abstract void draw(GraphicsContext graphicsContext);
-
-    @Override
-    public abstract boolean equals(Object obj);
-
 
 }
