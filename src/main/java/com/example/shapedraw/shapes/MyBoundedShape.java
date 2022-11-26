@@ -29,6 +29,7 @@ public abstract class MyBoundedShape extends MyShape {
     /**
      * Equal Method
      * we measure the shape with (x2,y2) coordinate when x2 - represent the length and y2 the height.
+     * and then we send it to super (MyShapes) to see that is both the same classes.
      *
      * @param obj - the shape we want to check if its equal
      * @return true - if the shapes are equal in size, false if another
