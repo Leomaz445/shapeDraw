@@ -21,6 +21,7 @@ public class DrawShapeController {
     private static final int NUMBER_OF_TOTAL_SHAPES = 6;
     private static final int UPPER_RANDOM_BOUND = 201;
     private final static int MOVE_SHAPE_BY_VALUE = 10;
+    public static final boolean FILL_WITH_COLOR = true;
 
 
     @FXML
@@ -117,12 +118,10 @@ public class DrawShapeController {
             y2 = rand.nextInt(UPPER_RANDOM_BOUND);
             switch (shapeTypeCode) {
                 case MY_LINE -> myShapes.add(new MyLine(x1, y1, x2, y2, Color.RED));
-                case MY_OVAL -> myShapes.add(new MyOval(x1, y1, x2, y2, Color.RED, true));
-                case MY_RECTANGLE -> myShapes.add(new MyRectangle(x1, y1, x2, y2, Color.RED, true));
+                case MY_OVAL -> myShapes.add(new MyOval(x1, y1, x2, y2, Color.RED, FILL_WITH_COLOR));
+                case MY_RECTANGLE -> myShapes.add(new MyRectangle(x1, y1, x2, y2, Color.RED, FILL_WITH_COLOR));
             }
         }
     }
-
-
 }
 

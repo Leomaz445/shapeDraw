@@ -27,24 +27,5 @@ public class MyRectangle extends MyBoundedShape {
         graphicsContext.setStroke(getColor());
         graphicsContext.strokeRect(getX1(), getY1(), getX2(), getY2());
     }
-
-    /**
-     * Equal Method that we override from the Object class
-     * we measure the shape with (x2,y2) coordinate when x2 - represent the length and y2 the height.
-     *
-     * @param obj - the shape we want to check if its equal
-     * @return true - if the shapes are equal in size, false if another
-     */
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == null)
-            return false;
-        if (!(obj instanceof MyRectangle myRectangle))
-            return false;
-
-        return (this.getX2() == myRectangle.getX2())
-                && (this.getY1() == myRectangle.getY1());
-
-    }
 }
 

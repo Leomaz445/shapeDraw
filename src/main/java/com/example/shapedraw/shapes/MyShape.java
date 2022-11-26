@@ -3,6 +3,9 @@ package com.example.shapedraw.shapes;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
+import static com.example.shapedraw.ShapeDraw.SCENE_MAX_HEIGHT;
+import static com.example.shapedraw.ShapeDraw.SCENE_MAX_WIDTH;
+
 /**
  * Have the common attributes of shape,each shape has two set of coordinates (x1,y1),(x2,y2)
  * this class has a abstract methods draw and equals and in this
@@ -29,7 +32,8 @@ public abstract class MyShape implements Cloneable {
 
     //Set X1
     public void setX1(int x1) {
-        this.x1 = x1;
+        if (x1 >= 0 && x1 <= SCENE_MAX_HEIGHT)
+            this.x1 = x1;
     }
 
     //Get Y1
@@ -39,7 +43,8 @@ public abstract class MyShape implements Cloneable {
 
     //Set Y1
     public void setY1(int y1) {
-        this.y1 = y1;
+        if (y1 >= 0 && y1 <= SCENE_MAX_WIDTH)
+            this.y1 = y1;
     }
 
     //Get X2
@@ -49,7 +54,8 @@ public abstract class MyShape implements Cloneable {
 
     //Set X2
     public void setX2(int x2) {
-        this.x2 = x2;
+        if (x2 >= 0 && x2 <= SCENE_MAX_HEIGHT)
+            this.x2 = x2;
     }
 
     //Get Y2
@@ -59,7 +65,8 @@ public abstract class MyShape implements Cloneable {
 
     //Set Y2
     public void setY2(int y2) {
-        this.y2 = y2;
+        if (y2 >= 0 && y2 <= SCENE_MAX_WIDTH)
+            this.y2 = y2;
     }
 
     //Get Color
@@ -88,5 +95,16 @@ public abstract class MyShape implements Cloneable {
     @Override
     public Object clone() throws CloneNotSupportedException {
         return super.clone();
+    }
+
+    /**
+     * Here we make sure that the classes that are the same - so we're making equals with same class shapes
+     *
+     * @param obj - the obj we want to check if equals to another object
+     * @return true if there are equals or false if not
+     */
+    @Override
+    public boolean equals(Object obj) {
+        return this.getClass().equals(obj.getClass());
     }
 }

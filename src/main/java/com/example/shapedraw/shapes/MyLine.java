@@ -39,7 +39,7 @@ public class MyLine extends MyShape {
         if (!(obj instanceof MyLine myLine))
             return false;
 
-        return calcLineLength(this) == calcLineLength(myLine);
+        return ((calcLineLength(this) == calcLineLength(myLine)) && super.equals(obj));
     }
 
     //Private function that implements Pythagoras to check if the line are equals in length.

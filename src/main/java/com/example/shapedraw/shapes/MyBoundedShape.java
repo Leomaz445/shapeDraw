@@ -25,4 +25,22 @@ public abstract class MyBoundedShape extends MyShape {
         this.fillingColor = fillingColor;
     }
 
+
+    /**
+     * Equal Method
+     * we measure the shape with (x2,y2) coordinate when x2 - represent the length and y2 the height.
+     *
+     * @param obj - the shape we want to check if its equal
+     * @return true - if the shapes are equal in size, false if another
+     */
+    @Override
+    public boolean equals(Object obj) {
+        if ((obj == null))
+            return false;
+        if (!(obj instanceof MyShape))
+            return false;
+
+        return (this.getX2() == ((MyShape) obj).getX2())
+                && (this.getY2() == ((MyShape) obj).getY2() && super.equals(obj));
+    }
 }

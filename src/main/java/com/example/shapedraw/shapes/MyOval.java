@@ -29,22 +29,4 @@ public class MyOval extends MyBoundedShape {
         graphicsContext.strokeOval(getX1(), getY1(), getX2(), getY2());
 
     }
-
-    /**
-     * Equal Method that we override from the Object class
-     * we measure the shape with (x2,y2) coordinate when x2 - represent the length and y2 the height.
-     *
-     * @param obj - the shape we want to check if its equal
-     * @return true - if the shapes are equal in size, false if another
-     */
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == null)
-            return false;
-        if (!(obj instanceof MyOval myOval))
-            return false;
-
-        return (this.getX2() == myOval.getX2())
-                && (this.getY2() == myOval.getY2());
-    }
 }
