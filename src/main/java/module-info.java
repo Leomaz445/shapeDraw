@@ -5,4 +5,6 @@ module com.example.shapedraw {
 
     opens com.example.shapedraw to javafx.fxml;
     exports com.example.shapedraw;
+    exports com.example.shapedraw.shapes;
+    opens com.example.shapedraw.shapes to javafx.fxml;
 }

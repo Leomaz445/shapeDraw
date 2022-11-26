@@ -9,7 +9,7 @@ import javafx.scene.paint.Color;
 import java.util.ArrayList;
 import java.util.Random;
 
-import static com.example.shapedraw.ShapeTypeCode.*;
+import static com.example.shapedraw.shapes.ShapeTypeCode.*;
 
 /**
  * The Controller from here we initialize the canvas and drawing the shapes

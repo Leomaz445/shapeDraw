@@ -1,4 +1,4 @@
-package com.example.shapedraw;
+package com.example.shapedraw.shapes;
 
 /**
  * This class is an enum holds the Shapes type code
